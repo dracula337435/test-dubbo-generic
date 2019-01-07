@@ -23,11 +23,11 @@ public class CosumerTest {
      * 使用的是泛化实现
      */
     @Reference(group = "test-generic")
-    private TestInterface testInterface;
+    private TestInterface testInterfaceByGeneric;
 
     @Test
-    public void test(){
-        System.out.println(testInterface.sayHell("gxk"));
+    public void testByGeneric(){
+        System.out.println(testInterfaceByGeneric.sayHell("gxk"));
     }
 
     /**
@@ -58,7 +58,7 @@ public class CosumerTest {
         @Bean
         public RegistryConfig registryConfig(){
             RegistryConfig registryConfig = new RegistryConfig();
-            registryConfig.setAddress("zookeeper://127.0.0.1:2181");
+            registryConfig.setAddress("multicast://224.5.6.7:1234");
             return registryConfig;
         }
 
