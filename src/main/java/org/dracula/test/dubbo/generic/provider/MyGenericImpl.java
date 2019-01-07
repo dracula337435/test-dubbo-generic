@@ -13,9 +13,9 @@ import java.util.stream.Collectors;
  * @author dk
  */
 @Component
-public class TestInterfaceImpl implements GenericService {
+public class MyGenericImpl implements GenericService {
 
-    private static Logger logger = LoggerFactory.getLogger(TestInterfaceImpl.class);
+    private static Logger logger = LoggerFactory.getLogger(MyGenericImpl.class);
 
     @Override
     public Object $invoke(String method, String[] parameterTypes, Object[] args) throws GenericException {

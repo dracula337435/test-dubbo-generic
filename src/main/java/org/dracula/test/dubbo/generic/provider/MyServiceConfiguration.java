@@ -19,7 +19,7 @@ public class MyServiceConfiguration {
      * @return
      */
     @Bean
-    public ServiceBean serviceBean(TestInterfaceImpl testInterface){
+    public ServiceBean serviceBean(MyGenericImpl testInterface){
         ServiceBean serviceBean = new ServiceBean();
         serviceBean.setInterface(TestInterface.class);
         serviceBean.setRef(testInterface);
