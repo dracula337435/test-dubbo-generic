@@ -19,12 +19,26 @@ import org.springframework.test.context.junit4.SpringRunner;
 @ContextConfiguration(classes = CosumerTest.TmpConfig.class)
 public class CosumerTest {
 
-    @Reference
+    /**
+     * 使用的是泛化实现
+     */
+    @Reference(group = "test-generic")
     private TestInterface testInterface;
 
     @Test
     public void test(){
         System.out.println(testInterface.sayHell("gxk"));
+    }
+
+    /**
+     * 使用的是泛化实现
+     */
+    @Reference(group = "test-jdk-d-p")
+    private TestInterface testInterfaceByJdkDP;
+
+    @Test
+    public void testByJdkDP(){
+        System.out.println(testInterfaceByJdkDP.sayHell("gxk"));
     }
 
     /**
