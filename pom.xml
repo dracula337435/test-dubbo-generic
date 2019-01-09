@@ -15,13 +15,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <java.version>1.8</java.version>
-        <mvn-compiler-plugin.source>
-            ${java.version}
-        </mvn-compiler-plugin.source>
-        <mvn-compiler-plugin.target>
-            ${mvn-compiler-plugin.source}
-        </mvn-compiler-plugin.target>
+        <!--<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
         <global.encoding>UTF-8</global.encoding>
     </properties>
 
@@ -49,8 +43,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>${mvn-compiler-plugin.source}</source>
-                    <target>${mvn-compiler-plugin.target}</target>
                     <encoding>${global.encoding}</encoding>
                 </configuration>
             </plugin>
