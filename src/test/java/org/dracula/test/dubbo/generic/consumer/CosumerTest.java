@@ -5,6 +5,7 @@ import com.alibaba.dubbo.config.RegistryConfig;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.alibaba.dubbo.config.spring.context.annotation.DubboComponentScan;
 import org.dracula.test.dubbo.generic.TestInterface;
+import org.dracula.test.dubbo.generic.TestParam;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.context.annotation.Bean;
@@ -27,7 +28,10 @@ public class CosumerTest {
 
     @Test
     public void testByGeneric(){
-        System.out.println(testInterfaceByGeneric.sayHell("gxk"));
+        System.out.println(testInterfaceByGeneric.sayHello("gxk"));
+        TestParam testParam = new TestParam();
+        testParam.setText("gxk");
+        System.out.println(testInterfaceByGeneric.sayHello(testParam));
     }
 
     /**
@@ -38,7 +42,10 @@ public class CosumerTest {
 
     @Test
     public void testByJdkDP(){
-        System.out.println(testInterfaceByJdkDP.sayHell("gxk"));
+        System.out.println(testInterfaceByJdkDP.sayHello("gxk"));
+        TestParam testParam = new TestParam();
+        testParam.setText("gxk");
+        System.out.println(testInterfaceByJdkDP.sayHello(testParam));
     }
 
     /**

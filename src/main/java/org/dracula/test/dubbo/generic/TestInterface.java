@@ -10,6 +10,13 @@ public interface TestInterface {
      * @param name
      * @return
      */
-    String sayHell(String name);
+    String sayHello(String name);
+
+    /**
+     *
+     * @param testParam
+     * @return
+     */
+    TestParam sayHello(TestParam testParam);
 
 }
